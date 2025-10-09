@@ -1,0 +1,15 @@
+meta {
+  name: cat-get-all-cats
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/cats
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
