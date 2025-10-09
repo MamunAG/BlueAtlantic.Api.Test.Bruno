@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Blue Atlantic",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
