@@ -1,0 +1,25 @@
+meta {
+  name: Update app setting by id
+  type: http
+  seq: 12
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/app-settings/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 32
+}
+
+body:json {
+  {
+    "type": "media",
+    "key": "maximumFileSize",
+    "value": "0",
+    "valueType": "json",
+    "description": "Media upload maximum file size in kb"
+  }
+}

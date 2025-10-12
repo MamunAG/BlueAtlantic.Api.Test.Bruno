@@ -1,0 +1,19 @@
+meta {
+  name: Get count of attachments for a farrier visit
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horse-farrier-visit-attachments/count-by-farrier-visit/:farrierVisitId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  farrierVisitId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

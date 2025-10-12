@@ -1,0 +1,23 @@
+meta {
+  name: Get all inventory units
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/inventory-units
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~category: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

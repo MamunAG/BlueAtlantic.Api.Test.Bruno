@@ -1,0 +1,20 @@
+meta {
+  name: Get all users with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~roleId: 
+  ~department: 
+  ~search: 
+}

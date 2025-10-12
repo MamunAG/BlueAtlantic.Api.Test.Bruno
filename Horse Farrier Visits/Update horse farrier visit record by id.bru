@@ -1,0 +1,29 @@
+meta {
+  name: Update horse farrier visit record by id
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/horse-farrier-visits/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "horseId": "",
+    "name": "",
+    "date": "",
+    "notes": "",
+    "recordedByUserId": ""
+  }
+}

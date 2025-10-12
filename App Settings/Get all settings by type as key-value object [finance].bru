@@ -1,0 +1,15 @@
+meta {
+  name: Get all settings by type as key-value object [finance]
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/v1/app-settings/by-type/:type
+  body: none
+  auth: inherit
+}
+
+params:path {
+  type: finance
+}

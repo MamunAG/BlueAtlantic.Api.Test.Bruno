@@ -1,0 +1,15 @@
+meta {
+  name: Get app setting by id
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/api/v1/app-settings/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 32
+}

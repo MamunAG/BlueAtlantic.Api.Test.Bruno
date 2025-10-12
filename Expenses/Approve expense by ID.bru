@@ -1,0 +1,19 @@
+meta {
+  name: Approve expense by ID
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/expenses/:id/approve
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

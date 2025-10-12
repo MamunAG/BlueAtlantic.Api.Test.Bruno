@@ -1,0 +1,19 @@
+meta {
+  name: Permanently delete inventory unit
+  type: http
+  seq: 8
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/inventory-units/:id/permanent
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

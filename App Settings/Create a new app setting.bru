@@ -1,0 +1,21 @@
+meta {
+  name: Create a new app setting
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/app-settings
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "media",
+    "key": "maximumFileSize",
+    "value": "0",
+    "valueType": "json",
+    "description": "Media upload maximum file size in kb"
+  }
+}

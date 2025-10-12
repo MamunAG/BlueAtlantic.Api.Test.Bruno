@@ -1,0 +1,23 @@
+meta {
+  name: Get all media files with optional filtering and pagination
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/media-library
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~file_type: 
+  ~search: 
+  ~filters: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

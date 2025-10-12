@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted workout session
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/v1/workout-sessions/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

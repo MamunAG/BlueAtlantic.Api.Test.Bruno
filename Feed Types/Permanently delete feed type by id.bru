@@ -1,0 +1,19 @@
+meta {
+  name: Permanently delete feed type by id
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/feed-types/:id/permanent
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

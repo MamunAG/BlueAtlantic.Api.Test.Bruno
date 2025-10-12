@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "Blue Atlantic",
+  "name": "Blue Atlantic API",
   "type": "collection",
   "ignore": [
     "node_modules",

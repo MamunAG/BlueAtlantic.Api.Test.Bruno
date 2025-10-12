@@ -1,0 +1,24 @@
+meta {
+  name: Create a new physio trainer profile
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/physio-trainers
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": "",
+    "specialization": "",
+    "availability": "",
+    "status": ""
+  }
+}

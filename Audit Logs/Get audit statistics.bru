@@ -1,0 +1,20 @@
+meta {
+  name: Get audit statistics
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/audits/stats
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~startDate: 
+  ~endDate: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

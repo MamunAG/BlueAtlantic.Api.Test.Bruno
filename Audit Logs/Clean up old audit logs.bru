@@ -1,0 +1,19 @@
+meta {
+  name: Clean up old audit logs
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/audits/cleanup
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~daysToKeep: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

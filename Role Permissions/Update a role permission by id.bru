@@ -1,0 +1,29 @@
+meta {
+  name: Update a role permission by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/role-permissions/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "roleId": "",
+    "resourceId": "",
+    "canView": false,
+    "canEdit": false,
+    "canDelete": false
+  }
+}

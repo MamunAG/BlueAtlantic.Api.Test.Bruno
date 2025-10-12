@@ -1,0 +1,19 @@
+meta {
+  name: Remove all attachments for a vet visit
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/horse-vet-visit-attachments/by-vet-visit/:vetVisitId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  vetVisitId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

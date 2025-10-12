@@ -1,0 +1,19 @@
+meta {
+  name: Get horse health record by id
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horse-health/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

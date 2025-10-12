@@ -1,0 +1,28 @@
+meta {
+  name: Update time slot by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/time-slots/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "timeOfDay": "",
+    "durationMinutes": "",
+    "serviceType": "",
+    "status": ""
+  }
+}

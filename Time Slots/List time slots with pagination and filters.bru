@@ -1,0 +1,25 @@
+meta {
+  name: List time slots with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/time-slots
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~serviceType: 
+  ~status: 
+  ~timeOfDay: 
+  ~minDuration: 
+  ~maxDuration: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

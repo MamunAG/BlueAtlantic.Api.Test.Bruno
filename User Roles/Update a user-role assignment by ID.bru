@@ -1,0 +1,26 @@
+meta {
+  name: Update a user-role assignment by ID
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/user-roles/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": "",
+    "roleId": ""
+  }
+}

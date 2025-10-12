@@ -1,0 +1,19 @@
+meta {
+  name: Permanently delete horse breed by id
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/horse-breeds/:id/permanent
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

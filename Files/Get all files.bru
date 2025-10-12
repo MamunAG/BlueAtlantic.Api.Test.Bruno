@@ -1,0 +1,20 @@
+meta {
+  name: Get all files
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/files
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~assignedRiderId: 
+  ~file_name: 
+  ~search: 
+  ~file_type: 
+}

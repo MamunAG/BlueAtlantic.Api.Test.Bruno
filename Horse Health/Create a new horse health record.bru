@@ -1,0 +1,26 @@
+meta {
+  name: Create a new horse health record
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/horse-health
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "horseId": "",
+    "date": "",
+    "type": "",
+    "status": "",
+    "notes": "",
+    "recordedByUserId": ""
+  }
+}

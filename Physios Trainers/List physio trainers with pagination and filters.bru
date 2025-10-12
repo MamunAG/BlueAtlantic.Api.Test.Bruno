@@ -1,0 +1,24 @@
+meta {
+  name: List physio trainers with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/physio-trainers
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~userId: 
+  ~specialization: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

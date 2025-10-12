@@ -1,0 +1,25 @@
+meta {
+  name: List horse vet visit records with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horse-vet-visits
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~horseId: 
+  ~recordedByUserId: 
+  ~dateFrom: 
+  ~dateTo: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

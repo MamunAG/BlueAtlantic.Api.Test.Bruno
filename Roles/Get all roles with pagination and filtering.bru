@@ -1,0 +1,23 @@
+meta {
+  name: Get all roles with pagination and filtering
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/roles
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~name: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

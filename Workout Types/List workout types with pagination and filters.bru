@@ -1,0 +1,25 @@
+meta {
+  name: List workout types with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/workout-types
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~name: 
+  ~search: 
+  ~minDuration: 
+  ~maxDuration: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Bulk update user roles
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/user-roles/bulk
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": "",
+    "roleIds": []
+  }
+}

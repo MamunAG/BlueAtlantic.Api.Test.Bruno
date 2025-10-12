@@ -1,0 +1,15 @@
+meta {
+  name: Get active budget categories
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/finance-budget-categories/active
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

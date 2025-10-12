@@ -1,0 +1,19 @@
+meta {
+  name: Permanently delete physio trainer by id
+  type: http
+  seq: 7
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/physio-trainers/:id/permanent
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

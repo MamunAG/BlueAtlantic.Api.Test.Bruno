@@ -1,0 +1,26 @@
+meta {
+  name: Create a new workout session
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/workout-sessions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "athleteId": "",
+    "horseId": "",
+    "trainerUserId": "",
+    "scheduledAt": "",
+    "workoutTypeId": "",
+    "status": ""
+  }
+}

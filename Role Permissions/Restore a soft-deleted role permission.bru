@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted role permission
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/api/v1/role-permissions/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Update finance budget category by id
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/finance-budget-categories/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "monthlyBudget": "",
+    "alertThresholdPercent": "",
+    "status": ""
+  }
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Get all expenses with filtering and pagination
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/expenses
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~horseId: 
+  ~type: 
+  ~status: 
+  ~submittedByUserId: 
+  ~hasReceipt: 
+  ~dateFrom: 
+  ~dateTo: 
+  ~amountFrom: 
+  ~amountTo: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

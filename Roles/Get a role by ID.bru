@@ -1,0 +1,19 @@
+meta {
+  name: Get a role by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/roles/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 4
+}
+
+auth:bearer {
+  token: {{token}}
+}

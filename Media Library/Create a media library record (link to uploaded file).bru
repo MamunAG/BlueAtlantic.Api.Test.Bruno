@@ -1,0 +1,19 @@
+meta {
+  name: Create a media library record (link to uploaded file)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/media-library
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {}
+}

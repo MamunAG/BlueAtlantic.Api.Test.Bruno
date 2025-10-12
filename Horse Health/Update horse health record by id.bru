@@ -1,0 +1,30 @@
+meta {
+  name: Update horse health record by id
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/horse-health/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "horseId": "",
+    "date": "",
+    "type": "",
+    "status": "",
+    "notes": "",
+    "recordedByUserId": ""
+  }
+}

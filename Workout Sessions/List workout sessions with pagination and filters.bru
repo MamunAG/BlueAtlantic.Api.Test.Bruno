@@ -1,0 +1,27 @@
+meta {
+  name: List workout sessions with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/workout-sessions
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~athleteId: 
+  ~horseId: 
+  ~trainerUserId: 
+  ~workoutTypeId: 
+  ~status: 
+  ~dateFrom: 
+  ~dateTo: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

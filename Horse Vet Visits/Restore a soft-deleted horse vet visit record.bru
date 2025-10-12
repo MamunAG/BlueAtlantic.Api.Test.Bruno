@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted horse vet visit record
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/horse-vet-visits/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

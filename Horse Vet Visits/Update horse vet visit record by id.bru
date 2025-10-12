@@ -1,0 +1,29 @@
+meta {
+  name: Update horse vet visit record by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/horse-vet-visits/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "horseId": "",
+    "date": "",
+    "treatment": "",
+    "notes": "",
+    "recordedByUserId": ""
+  }
+}

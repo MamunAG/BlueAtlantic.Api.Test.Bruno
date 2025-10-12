@@ -1,0 +1,19 @@
+meta {
+  name: Soft delete inventory unit
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/inventory-units/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

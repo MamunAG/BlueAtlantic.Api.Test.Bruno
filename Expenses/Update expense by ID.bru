@@ -1,0 +1,32 @@
+meta {
+  name: Update expense by ID
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/expenses/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "date": "",
+    "horseId": "",
+    "type": "",
+    "amount": "",
+    "submittedByUserId": "",
+    "status": "",
+    "hasReceipt": false
+  }
+}

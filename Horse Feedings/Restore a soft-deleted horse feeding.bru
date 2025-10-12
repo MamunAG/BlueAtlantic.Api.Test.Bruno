@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted horse feeding
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/horse-feedings/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

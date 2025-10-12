@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted horse farrier visit record
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/v1/horse-farrier-visits/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

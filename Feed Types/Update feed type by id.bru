@@ -1,0 +1,27 @@
+meta {
+  name: Update feed type by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/feed-types/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "description": "",
+    "status": ""
+  }
+}

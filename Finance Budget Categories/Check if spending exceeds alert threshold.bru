@@ -1,0 +1,20 @@
+meta {
+  name: Check if spending exceeds alert threshold
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/api/v1/finance-budget-categories/:id/check-alert/:currentSpending
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+  currentSpending: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

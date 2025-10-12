@@ -1,0 +1,22 @@
+meta {
+  name: Assign a role to a user
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/user-roles
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": "",
+    "roleId": ""
+  }
+}

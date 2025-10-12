@@ -1,0 +1,19 @@
+meta {
+  name: Get alert threshold amount
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/api/v1/finance-budget-categories/:id/alert-threshold-amount
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

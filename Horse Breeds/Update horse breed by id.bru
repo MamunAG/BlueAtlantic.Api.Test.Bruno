@@ -1,0 +1,27 @@
+meta {
+  name: Update horse breed by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/horse-breeds/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "description": "",
+    "status": ""
+  }
+}

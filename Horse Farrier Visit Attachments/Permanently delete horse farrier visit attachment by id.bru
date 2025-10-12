@@ -1,0 +1,19 @@
+meta {
+  name: Permanently delete horse farrier visit attachment by id
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/horse-farrier-visit-attachments/:id/permanent
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

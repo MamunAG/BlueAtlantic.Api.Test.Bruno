@@ -1,0 +1,28 @@
+meta {
+  name: Update physio trainer by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/physio-trainers/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": "",
+    "specialization": "",
+    "availability": "",
+    "status": ""
+  }
+}

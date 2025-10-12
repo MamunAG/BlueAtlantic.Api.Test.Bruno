@@ -1,0 +1,19 @@
+meta {
+  name: Permanently delete a role by ID
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/roles/:id/permanent
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted time slot
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/time-slots/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

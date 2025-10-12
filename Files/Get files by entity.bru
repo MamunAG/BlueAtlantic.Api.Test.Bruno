@@ -1,0 +1,20 @@
+meta {
+  name: Get files by entity
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/files/entity/:entityType/:entityId
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~fileType: 
+}
+
+params:path {
+  entityType: 
+  entityId: 
+}

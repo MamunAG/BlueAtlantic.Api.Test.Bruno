@@ -1,0 +1,28 @@
+meta {
+  name: Update workout type by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/workout-types/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "description": "",
+    "durationMinutes": "",
+    "status": ""
+  }
+}

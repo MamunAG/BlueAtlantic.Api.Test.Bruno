@@ -1,0 +1,30 @@
+meta {
+  name: List horses with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horses
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~gender: 
+  ~assignedRiderId: 
+  ~breedId: 
+  ~name: 
+  ~search: 
+  ~minAge: 
+  ~maxAge: 
+  ~birthDateFrom: 
+  ~birthDateTo: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

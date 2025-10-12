@@ -1,0 +1,27 @@
+meta {
+  name: Update a permission resource by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/permission-resources/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "resourceKey": "",
+    "displayName": "",
+    "status": ""
+  }
+}

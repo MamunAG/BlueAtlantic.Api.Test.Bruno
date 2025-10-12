@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted feed type
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/feed-types/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

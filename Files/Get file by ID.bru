@@ -1,0 +1,15 @@
+meta {
+  name: Get file by ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/files/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}

@@ -1,0 +1,24 @@
+meta {
+  name: List horse farrier visit attachments with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horse-farrier-visit-attachments
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~farrierVisitId: 
+  ~fileId: 
+  ~stage: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

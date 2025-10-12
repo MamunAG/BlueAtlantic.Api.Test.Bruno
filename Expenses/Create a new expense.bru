@@ -1,0 +1,28 @@
+meta {
+  name: Create a new expense
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/expenses
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "date": "",
+    "horseId": "",
+    "type": "",
+    "amount": "",
+    "submittedByUserId": "",
+    "status": "",
+    "hasReceipt": false
+  }
+}

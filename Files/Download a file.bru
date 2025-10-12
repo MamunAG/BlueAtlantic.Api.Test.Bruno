@@ -1,0 +1,15 @@
+meta {
+  name: Download a file
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/v1/files/download/:filename
+  body: none
+  auth: inherit
+}
+
+params:path {
+  filename: 
+}

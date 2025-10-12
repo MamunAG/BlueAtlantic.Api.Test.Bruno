@@ -1,0 +1,22 @@
+meta {
+  name: Get all permission resources with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/permission-resources
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~status: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Serve a file
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/v1/files/serve/:filename
+  body: none
+  auth: inherit
+}
+
+params:path {
+  filename: 
+}

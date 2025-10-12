@@ -1,0 +1,19 @@
+meta {
+  name: Soft delete a permission resource by id
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/permission-resources/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

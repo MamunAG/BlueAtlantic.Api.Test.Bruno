@@ -1,0 +1,23 @@
+meta {
+  name: Get audit logs by user
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/audits/user/:userId
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 
+}
+
+params:path {
+  userId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get horse farrier visit attachments by farrier visit ID and stage
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horse-farrier-visit-attachments/by-farrier-visit/:farrierVisitId/stage/:stage
+  body: none
+  auth: bearer
+}
+
+params:path {
+  farrierVisitId: 
+  stage: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

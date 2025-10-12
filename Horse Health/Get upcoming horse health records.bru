@@ -1,0 +1,19 @@
+meta {
+  name: Get upcoming horse health records
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/horse-health/upcoming
+  body: none
+  auth: bearer
+}
+
+params:query {
+  days: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

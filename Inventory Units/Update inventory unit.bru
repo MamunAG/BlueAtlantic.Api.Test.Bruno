@@ -1,0 +1,31 @@
+meta {
+  name: Update inventory unit
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/inventory-units/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "",
+    "symbol": "",
+    "description": "",
+    "category": "",
+    "conversionFactor": "",
+    "baseUnit": "",
+    "status": ""
+  }
+}

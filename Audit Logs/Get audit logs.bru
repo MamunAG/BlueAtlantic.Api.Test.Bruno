@@ -1,0 +1,29 @@
+meta {
+  name: Get audit logs
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/audits
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~limit: 
+  ~userId: 
+  ~username: 
+  ~action: 
+  ~resource: 
+  ~resourceId: 
+  ~method: 
+  ~ip: 
+  ~responseStatus: 
+  ~success: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

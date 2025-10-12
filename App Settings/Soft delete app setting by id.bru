@@ -1,0 +1,15 @@
+meta {
+  name: Soft delete app setting by id
+  type: http
+  seq: 13
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/app-settings/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 24
+}
