@@ -1,0 +1,989 @@
+meta {
+  name: Save all settings
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/api/v1/app-settings/save-all
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+    {
+      "id": 39,
+      "type": "general",
+      "key": "application_name",
+      "value": "",
+      "valueType": "string",
+      "description": "Application name",
+      "createdAt": "2025-10-12T09:48:20.208Z",
+      "updatedAt": "2025-10-12T09:48:20.208Z",
+      "deletedAt": null
+    },
+    {
+      "id": 40,
+      "type": "general",
+      "key": "application_version",
+      "value": "",
+      "valueType": "string",
+      "description": "Application version",
+      "createdAt": "2025-10-12T09:48:20.757Z",
+      "updatedAt": "2025-10-12T09:48:20.757Z",
+      "deletedAt": null
+    },
+    {
+      "id": 42,
+      "type": "general",
+      "key": "debug_mode",
+      "value": "false",
+      "valueType": "boolean",
+      "description": "Debug Mode mode status",
+      "createdAt": "2025-10-12T09:48:21.987Z",
+      "updatedAt": "2025-10-12T09:48:21.987Z",
+      "deletedAt": null
+    },
+    {
+      "id": 44,
+      "type": "general",
+      "key": "default_country",
+      "value": "",
+      "valueType": "number",
+      "description": "Country for location settings",
+      "createdAt": "2025-10-12T09:48:23.084Z",
+      "updatedAt": "2025-10-12T09:48:23.084Z",
+      "deletedAt": null
+    },
+    {
+      "id": 43,
+      "type": "general",
+      "key": "default_timezone",
+      "value": "UTC",
+      "valueType": "string",
+      "description": "Timezone for location settings",
+      "createdAt": "2025-10-12T09:48:22.498Z",
+      "updatedAt": "2025-10-12T09:48:22.498Z",
+      "deletedAt": null
+    },
+    {
+      "id": 41,
+      "type": "general",
+      "key": "maintenance_mode",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "Maintenance mode status",
+      "createdAt": "2025-10-12T09:48:21.439Z",
+      "updatedAt": "2025-10-12T09:48:21.439Z",
+      "deletedAt": null
+    },
+    {
+      "id": 47,
+      "type": "booking",
+      "key": "advance_booking",
+      "value": "30",
+      "valueType": "number",
+      "description": "Advance booking in days",
+      "createdAt": "2025-10-12T09:48:24.546Z",
+      "updatedAt": "2025-10-12T09:48:24.546Z",
+      "deletedAt": null
+    },
+    {
+      "id": 46,
+      "type": "booking",
+      "key": "maximum_duration",
+      "value": "120",
+      "valueType": "number",
+      "description": "Booking maximum duration in minutes",
+      "createdAt": "2025-10-12T09:48:24.136Z",
+      "updatedAt": "2025-10-12T09:48:24.136Z",
+      "deletedAt": null
+    },
+    {
+      "id": 45,
+      "type": "booking",
+      "key": "minimum_duration",
+      "value": "30",
+      "valueType": "number",
+      "description": "Booking minimum duration in minutes",
+      "createdAt": "2025-10-12T09:48:23.728Z",
+      "updatedAt": "2025-10-12T09:48:23.728Z",
+      "deletedAt": null
+    },
+    {
+      "id": 49,
+      "type": "booking",
+      "key": "off_site_Locations",
+      "value": "",
+      "valueType": "string",
+      "description": "Off-site location options",
+      "createdAt": "2025-10-12T09:48:25.380Z",
+      "updatedAt": "2025-10-12T09:48:25.380Z",
+      "deletedAt": null
+    },
+    {
+      "id": 48,
+      "type": "booking",
+      "key": "on_site_Locations",
+      "value": "",
+      "valueType": "string",
+      "description": "On-site location options",
+      "createdAt": "2025-10-12T09:48:24.957Z",
+      "updatedAt": "2025-10-12T09:48:24.957Z",
+      "deletedAt": null
+    },
+    {
+      "id": 52,
+      "type": "media",
+      "key": "allowed_file_types",
+      "value": "jpeg",
+      "valueType": "string",
+      "description": "Allowed file types for upload",
+      "createdAt": "2025-10-12T09:48:26.901Z",
+      "updatedAt": "2025-10-12T09:48:26.901Z",
+      "deletedAt": null
+    },
+    {
+      "id": 50,
+      "type": "media",
+      "key": "maximum_file_size",
+      "value": "",
+      "valueType": "number",
+      "description": "Media upload maximum file size in kb",
+      "createdAt": "2025-10-12T09:48:26.090Z",
+      "updatedAt": "2025-10-12T09:48:26.090Z",
+      "deletedAt": null
+    },
+    {
+      "id": 51,
+      "type": "media",
+      "key": "storage_limit_per_user",
+      "value": "",
+      "valueType": "number",
+      "description": "User storage limit in kb",
+      "createdAt": "2025-10-12T09:48:26.494Z",
+      "updatedAt": "2025-10-12T09:48:26.494Z",
+      "deletedAt": null
+    },
+    {
+      "id": 58,
+      "type": "inventory",
+      "key": "alert_frequency",
+      "value": "",
+      "valueType": "string",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:25.475Z",
+      "updatedAt": "2025-10-12T09:50:25.475Z",
+      "deletedAt": null
+    },
+    {
+      "id": 57,
+      "type": "inventory",
+      "key": "bedding_replacement",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:24.864Z",
+      "updatedAt": "2025-10-12T09:50:24.864Z",
+      "deletedAt": null
+    },
+    {
+      "id": 54,
+      "type": "inventory",
+      "key": "daily_feeding_schedule",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "Enable daily feeding schedule of inventory items",
+      "createdAt": "2025-10-12T09:50:22.922Z",
+      "updatedAt": "2025-10-12T09:50:22.922Z",
+      "deletedAt": null
+    },
+    {
+      "id": 59,
+      "type": "inventory",
+      "key": "email_alerts",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:26.098Z",
+      "updatedAt": "2025-10-12T09:50:26.098Z",
+      "deletedAt": null
+    },
+    {
+      "id": 53,
+      "type": "inventory",
+      "key": "low_stock_thresholds",
+      "value": [
+        {
+          "id": 8,
+          "name": "Safety Equipment",
+          "defaultThreshold": 10,
+          "unit": "pieces",
+          "autoReorderEnabled": true,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:53.568Z",
+          "updatedAt": "2025-10-10T05:36:53.568Z",
+          "deletedAt": null
+        },
+        {
+          "id": 7,
+          "name": "Grooming Supplies",
+          "defaultThreshold": 25,
+          "unit": "pieces",
+          "autoReorderEnabled": false,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:53.076Z",
+          "updatedAt": "2025-10-10T05:36:53.076Z",
+          "deletedAt": null
+        },
+        {
+          "id": 6,
+          "name": "Equipment",
+          "defaultThreshold": 5,
+          "unit": "pieces",
+          "autoReorderEnabled": false,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:52.541Z",
+          "updatedAt": "2025-10-10T05:36:52.541Z",
+          "deletedAt": null
+        },
+        {
+          "id": 5,
+          "name": "Care Products",
+          "defaultThreshold": 15,
+          "unit": "bottles",
+          "autoReorderEnabled": false,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:52.142Z",
+          "updatedAt": "2025-10-10T05:36:52.142Z",
+          "deletedAt": null
+        },
+        {
+          "id": 4,
+          "name": "Bedding",
+          "defaultThreshold": 10,
+          "unit": "bales",
+          "autoReorderEnabled": true,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:51.522Z",
+          "updatedAt": "2025-10-10T05:36:51.522Z",
+          "deletedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Supplements",
+          "defaultThreshold": 30,
+          "unit": "bottles",
+          "autoReorderEnabled": false,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:51.105Z",
+          "updatedAt": "2025-10-10T05:36:51.105Z",
+          "deletedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Medicine",
+          "defaultThreshold": 20,
+          "unit": "vials",
+          "autoReorderEnabled": true,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:50.590Z",
+          "updatedAt": "2025-10-10T05:36:50.590Z",
+          "deletedAt": null
+        },
+        {
+          "id": 1,
+          "name": "Feed",
+          "defaultThreshold": 50,
+          "unit": "bags",
+          "autoReorderEnabled": true,
+          "status": "active",
+          "createdAt": "2025-10-10T05:36:50.185Z",
+          "updatedAt": "2025-10-10T05:36:50.185Z",
+          "deletedAt": null
+        }
+      ],
+      "valueType": "string",
+      "description": "List of items with low stock thresholds",
+      "createdAt": "2025-10-12T09:50:22.433Z",
+      "updatedAt": "2025-10-12T09:50:22.433Z",
+      "deletedAt": null
+    },
+    {
+      "id": 56,
+      "type": "inventory",
+      "key": "medicine_administration",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "Medicine Administration",
+      "createdAt": "2025-10-12T09:50:24.249Z",
+      "updatedAt": "2025-10-12T09:50:24.249Z",
+      "deletedAt": null
+    },
+    {
+      "id": 60,
+      "type": "inventory",
+      "key": "push_notifications",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:26.508Z",
+      "updatedAt": "2025-10-12T09:50:26.508Z",
+      "deletedAt": null
+    },
+    {
+      "id": 55,
+      "type": "inventory",
+      "key": "training_supplements",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "Enable Training Supplements of inventory items",
+      "createdAt": "2025-10-12T09:50:23.643Z",
+      "updatedAt": "2025-10-12T09:50:23.643Z",
+      "deletedAt": null
+    },
+    {
+      "id": 62,
+      "type": "finance",
+      "key": "auto_approval_threshold",
+      "value": "0.8",
+      "valueType": "number",
+      "description": "Budget usage threshold for alerts (80%)",
+      "createdAt": "2025-10-12T09:50:28.044Z",
+      "updatedAt": "2025-10-12T09:50:28.044Z",
+      "deletedAt": null
+    },
+    {
+      "id": 65,
+      "type": "finance",
+      "key": "auto_categorize_expenses",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:30.838Z",
+      "updatedAt": "2025-10-12T09:50:30.838Z",
+      "deletedAt": null
+    },
+    {
+      "id": 67,
+      "type": "finance",
+      "key": "auto_generate_reports",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:32.585Z",
+      "updatedAt": "2025-10-12T09:50:32.585Z",
+      "deletedAt": null
+    },
+    {
+      "id": 68,
+      "type": "finance",
+      "key": "budget_alerts",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:33.304Z",
+      "updatedAt": "2025-10-12T09:50:33.304Z",
+      "deletedAt": null
+    },
+    {
+      "id": 61,
+      "type": "finance",
+      "key": "budget_categories_limits",
+      "value": [
+        {
+          "id": 8,
+          "name": "Other",
+          "monthlyBudget": "200.00",
+          "alertThresholdPercent": 90,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:11.077Z",
+          "updatedAt": "2025-10-10T05:37:11.077Z",
+          "deletedAt": null
+        },
+        {
+          "id": 7,
+          "name": "Competition",
+          "monthlyBudget": "800.00",
+          "alertThresholdPercent": 85,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:10.448Z",
+          "updatedAt": "2025-10-10T05:37:10.448Z",
+          "deletedAt": null
+        },
+        {
+          "id": 6,
+          "name": "Equipment",
+          "monthlyBudget": "1000.00",
+          "alertThresholdPercent": 70,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:10.046Z",
+          "updatedAt": "2025-10-10T05:37:10.046Z",
+          "deletedAt": null
+        },
+        {
+          "id": 5,
+          "name": "Transport",
+          "monthlyBudget": "600.00",
+          "alertThresholdPercent": 80,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:09.329Z",
+          "updatedAt": "2025-10-10T05:37:09.329Z",
+          "deletedAt": null
+        },
+        {
+          "id": 4,
+          "name": "Supplements",
+          "monthlyBudget": "400.00",
+          "alertThresholdPercent": 75,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:08.835Z",
+          "updatedAt": "2025-10-10T05:37:08.835Z",
+          "deletedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Farrier",
+          "monthlyBudget": "300.00",
+          "alertThresholdPercent": 85,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:08.428Z",
+          "updatedAt": "2025-10-10T05:37:08.428Z",
+          "deletedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Veterinary",
+          "monthlyBudget": "500.00",
+          "alertThresholdPercent": 90,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:07.998Z",
+          "updatedAt": "2025-10-10T05:37:07.998Z",
+          "deletedAt": null
+        },
+        {
+          "id": 1,
+          "name": "Feed",
+          "monthlyBudget": "2000.00",
+          "alertThresholdPercent": 80,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:07.597Z",
+          "updatedAt": "2025-10-10T05:37:07.597Z",
+          "deletedAt": null
+        }
+      ],
+      "valueType": "string",
+      "description": "List of budget categories with limits",
+      "createdAt": "2025-10-12T09:50:27.550Z",
+      "updatedAt": "2025-10-12T09:50:27.550Z",
+      "deletedAt": null
+    },
+    {
+      "id": 63,
+      "type": "finance",
+      "key": "currency",
+      "value": "USD",
+      "valueType": "string",
+      "description": "Default currency for financial transactions",
+      "createdAt": "2025-10-12T09:50:29.075Z",
+      "updatedAt": "2025-10-12T09:50:29.075Z",
+      "deletedAt": null
+    },
+    {
+      "id": 66,
+      "type": "finance",
+      "key": "report_frequency",
+      "value": "Monthly",
+      "valueType": "string",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:31.458Z",
+      "updatedAt": "2025-10-12T09:50:31.458Z",
+      "deletedAt": null
+    },
+    {
+      "id": 64,
+      "type": "finance",
+      "key": "require_receipts",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "",
+      "createdAt": "2025-10-12T09:50:29.894Z",
+      "updatedAt": "2025-10-12T09:50:29.894Z",
+      "deletedAt": null
+    },
+    {
+      "id": 72,
+      "type": "notifications",
+      "key": "booking_reminder",
+      "value": "24",
+      "valueType": "number",
+      "description": "Notification reminder in hour",
+      "createdAt": "2025-10-12T09:50:36.165Z",
+      "updatedAt": "2025-10-12T09:50:36.165Z",
+      "deletedAt": null
+    },
+    {
+      "id": 69,
+      "type": "notifications",
+      "key": "email_notifications",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "Enable email notification",
+      "createdAt": "2025-10-12T09:50:33.983Z",
+      "updatedAt": "2025-10-12T09:50:33.983Z",
+      "deletedAt": null
+    },
+    {
+      "id": 70,
+      "type": "notifications",
+      "key": "push_notifications",
+      "value": "true",
+      "valueType": "boolean",
+      "description": "Enable push notification",
+      "createdAt": "2025-10-12T09:50:34.805Z",
+      "updatedAt": "2025-10-12T09:50:34.805Z",
+      "deletedAt": null
+    },
+    {
+      "id": 71,
+      "type": "notifications",
+      "key": "sms_notifications",
+      "value": "false",
+      "valueType": "boolean",
+      "description": "Enable SMS notification",
+      "createdAt": "2025-10-12T09:50:35.561Z",
+      "updatedAt": "2025-10-12T09:50:35.561Z",
+      "deletedAt": null
+    },
+    {
+      "id": 73,
+      "type": "notifications",
+      "key": "weekly_digest",
+      "value": "2",
+      "valueType": "number",
+      "description": "Notification reminder on a specific day",
+      "createdAt": "2025-10-12T09:50:36.661Z",
+      "updatedAt": "2025-10-12T09:50:36.661Z",
+      "deletedAt": null
+    },
+    {
+      "id": 74,
+      "type": "permissions",
+      "key": "user_roles_and_permissions",
+      "value": [
+        {
+          "id": 14,
+          "roleId": 2,
+          "resourceId": 7,
+          "canView": true,
+          "canEdit": false,
+          "canDelete": false,
+          "role": {
+            "id": 2,
+            "name": "Physiotherapist",
+            "description": "Physiotherapist with access to horse health and treatment records",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:29.307Z",
+            "updatedAt": "2025-10-10T05:36:29.307Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 7,
+            "resourceKey": "notifications",
+            "displayName": "Notifications Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:39.533Z",
+            "updatedAt": "2025-10-10T05:36:39.533Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:49.468Z",
+          "updatedAt": "2025-10-10T05:36:49.468Z",
+          "deletedAt": null
+        },
+        {
+          "id": 13,
+          "roleId": 2,
+          "resourceId": 5,
+          "canView": true,
+          "canEdit": false,
+          "canDelete": false,
+          "role": {
+            "id": 2,
+            "name": "Physiotherapist",
+            "description": "Physiotherapist with access to horse health and treatment records",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:29.307Z",
+            "updatedAt": "2025-10-10T05:36:29.307Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 5,
+            "resourceKey": "inventory",
+            "displayName": "Inventory Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:38.715Z",
+            "updatedAt": "2025-10-10T05:36:38.715Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:48.957Z",
+          "updatedAt": "2025-10-10T05:36:48.957Z",
+          "deletedAt": null
+        },
+        {
+          "id": 12,
+          "roleId": 2,
+          "resourceId": 4,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": false,
+          "role": {
+            "id": 2,
+            "name": "Physiotherapist",
+            "description": "Physiotherapist with access to horse health and treatment records",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:29.307Z",
+            "updatedAt": "2025-10-10T05:36:29.307Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 4,
+            "resourceKey": "bookings",
+            "displayName": "Bookings Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:38.206Z",
+            "updatedAt": "2025-10-10T05:36:38.206Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:48.439Z",
+          "updatedAt": "2025-10-10T05:36:48.439Z",
+          "deletedAt": null
+        },
+        {
+          "id": 11,
+          "roleId": 2,
+          "resourceId": 3,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": false,
+          "role": {
+            "id": 2,
+            "name": "Physiotherapist",
+            "description": "Physiotherapist with access to horse health and treatment records",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:29.307Z",
+            "updatedAt": "2025-10-10T05:36:29.307Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 3,
+            "resourceKey": "horses",
+            "displayName": "Horses Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:37.668Z",
+            "updatedAt": "2025-10-10T05:36:37.668Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:48.033Z",
+          "updatedAt": "2025-10-10T05:36:48.033Z",
+          "deletedAt": null
+        },
+        {
+          "id": 10,
+          "roleId": 1,
+          "resourceId": 10,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 10,
+            "resourceKey": "audits",
+            "displayName": "Audit Logs",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:41.787Z",
+            "updatedAt": "2025-10-10T05:36:41.787Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:47.485Z",
+          "updatedAt": "2025-10-10T05:36:47.485Z",
+          "deletedAt": null
+        },
+        {
+          "id": 9,
+          "roleId": 1,
+          "resourceId": 9,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 9,
+            "resourceKey": "settings",
+            "displayName": "System Settings",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:40.765Z",
+            "updatedAt": "2025-10-10T05:36:40.765Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:47.112Z",
+          "updatedAt": "2025-10-10T05:36:47.112Z",
+          "deletedAt": null
+        },
+        {
+          "id": 8,
+          "roleId": 1,
+          "resourceId": 8,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 8,
+            "resourceKey": "reports",
+            "displayName": "Reports Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:40.048Z",
+            "updatedAt": "2025-10-10T05:36:40.048Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:46.690Z",
+          "updatedAt": "2025-10-10T05:36:46.690Z",
+          "deletedAt": null
+        },
+        {
+          "id": 7,
+          "roleId": 1,
+          "resourceId": 7,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 7,
+            "resourceKey": "notifications",
+            "displayName": "Notifications Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:39.533Z",
+            "updatedAt": "2025-10-10T05:36:39.533Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:46.194Z",
+          "updatedAt": "2025-10-10T05:36:46.194Z",
+          "deletedAt": null
+        },
+        {
+          "id": 6,
+          "roleId": 1,
+          "resourceId": 6,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 6,
+            "resourceKey": "financials",
+            "displayName": "Financial Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:39.125Z",
+            "updatedAt": "2025-10-10T05:36:39.125Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:45.781Z",
+          "updatedAt": "2025-10-10T05:36:45.781Z",
+          "deletedAt": null
+        },
+        {
+          "id": 5,
+          "roleId": 1,
+          "resourceId": 5,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 5,
+            "resourceKey": "inventory",
+            "displayName": "Inventory Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:38.715Z",
+            "updatedAt": "2025-10-10T05:36:38.715Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:45.066Z",
+          "updatedAt": "2025-10-10T05:36:45.066Z",
+          "deletedAt": null
+        },
+        {
+          "id": 4,
+          "roleId": 1,
+          "resourceId": 4,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 4,
+            "resourceKey": "bookings",
+            "displayName": "Bookings Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:38.206Z",
+            "updatedAt": "2025-10-10T05:36:38.206Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:44.473Z",
+          "updatedAt": "2025-10-10T05:36:44.473Z",
+          "deletedAt": null
+        },
+        {
+          "id": 3,
+          "roleId": 1,
+          "resourceId": 3,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 3,
+            "resourceKey": "horses",
+            "displayName": "Horses Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:37.668Z",
+            "updatedAt": "2025-10-10T05:36:37.668Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:43.949Z",
+          "updatedAt": "2025-10-10T05:36:43.949Z",
+          "deletedAt": null
+        },
+        {
+          "id": 2,
+          "roleId": 1,
+          "resourceId": 2,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 2,
+            "resourceKey": "roles",
+            "displayName": "Roles Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:36.912Z",
+            "updatedAt": "2025-10-10T05:36:36.912Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:43.425Z",
+          "updatedAt": "2025-10-10T05:36:43.425Z",
+          "deletedAt": null
+        },
+        {
+          "id": 1,
+          "roleId": 1,
+          "resourceId": 1,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "role": {
+            "id": 1,
+            "name": "Administrator",
+            "description": "Full system administrator with all permissions",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:28.278Z",
+            "updatedAt": "2025-10-10T05:36:28.278Z",
+            "deletedAt": null
+          },
+          "resource": {
+            "id": 1,
+            "resourceKey": "users",
+            "displayName": "Users Management",
+            "status": "active",
+            "createdAt": "2025-10-10T05:36:36.278Z",
+            "updatedAt": "2025-10-10T05:36:36.278Z",
+            "deletedAt": null
+          },
+          "createdAt": "2025-10-10T05:36:42.502Z",
+          "updatedAt": "2025-10-10T05:36:42.502Z",
+          "deletedAt": null
+        }
+      ],
+      "valueType": "string",
+      "description": "List of user roles and permissions for each modules",
+      "createdAt": "2025-10-12T09:50:37.156Z",
+      "updatedAt": "2025-10-12T09:50:37.156Z",
+      "deletedAt": null
+    }
+  ]
+}
