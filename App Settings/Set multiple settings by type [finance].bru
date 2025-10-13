@@ -1,0 +1,109 @@
+meta {
+  name: Set multiple settings by type [finance]
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/api/v1/app-settings/by-type/:type
+  body: json
+  auth: inherit
+}
+
+params:path {
+  type: finance
+}
+
+body:json {
+  {
+      "auto_approval_threshold": 0.8,
+      "auto_categorize_expenses": true,
+      "auto_generate_reports": true,
+      "budget_alerts": true,
+      "budget_categories_limits": [
+        {
+          "id": 8,
+          "name": "Other",
+          "monthlyBudget": "200.00",
+          "alertThresholdPercent": 90,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:11.077Z",
+          "updatedAt": "2025-10-10T05:37:11.077Z",
+          "deletedAt": null
+        },
+        {
+          "id": 7,
+          "name": "Competition",
+          "monthlyBudget": "800.00",
+          "alertThresholdPercent": 85,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:10.448Z",
+          "updatedAt": "2025-10-10T05:37:10.448Z",
+          "deletedAt": null
+        },
+        {
+          "id": 6,
+          "name": "Equipment",
+          "monthlyBudget": "1000.00",
+          "alertThresholdPercent": 70,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:10.046Z",
+          "updatedAt": "2025-10-10T05:37:10.046Z",
+          "deletedAt": null
+        },
+        {
+          "id": 5,
+          "name": "Transport",
+          "monthlyBudget": "600.00",
+          "alertThresholdPercent": 80,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:09.329Z",
+          "updatedAt": "2025-10-10T05:37:09.329Z",
+          "deletedAt": null
+        },
+        {
+          "id": 4,
+          "name": "Supplements",
+          "monthlyBudget": "400.00",
+          "alertThresholdPercent": 75,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:08.835Z",
+          "updatedAt": "2025-10-10T05:37:08.835Z",
+          "deletedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Farrier",
+          "monthlyBudget": "300.00",
+          "alertThresholdPercent": 85,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:08.428Z",
+          "updatedAt": "2025-10-10T05:37:08.428Z",
+          "deletedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Veterinary",
+          "monthlyBudget": "500.00",
+          "alertThresholdPercent": 90,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:07.998Z",
+          "updatedAt": "2025-10-10T05:37:07.998Z",
+          "deletedAt": null
+        },
+        {
+          "id": 1,
+          "name": "Feed",
+          "monthlyBudget": "2000.00",
+          "alertThresholdPercent": 80,
+          "status": "active",
+          "createdAt": "2025-10-10T05:37:07.597Z",
+          "updatedAt": "2025-10-10T05:37:07.597Z",
+          "deletedAt": null
+        }
+      ],
+      "currency": "USD",
+      "report_frequency": "Monthly",
+      "require_receipts": true
+    }
+}

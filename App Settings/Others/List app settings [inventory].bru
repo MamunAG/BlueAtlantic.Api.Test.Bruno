@@ -1,18 +1,18 @@
 meta {
-  name: List app settings [finance]
+  name: List app settings [inventory]
   type: http
-  seq: 5
+  seq: 4
 }
 
 get {
-  url: {{baseUrl}}/api/v1/app-settings?key&type=finance
+  url: {{baseUrl}}/api/v1/app-settings?key&type=inventory
   body: none
   auth: inherit
 }
 
 params:query {
   key: 
-  type: finance
+  type: inventory
   ~search: 
   ~page: 
   ~limit: 

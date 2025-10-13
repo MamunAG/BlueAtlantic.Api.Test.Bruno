@@ -1,13 +1,13 @@
 meta {
   name: List app settings [permissions]
   type: http
-  seq: 7
+  seq: 4
 }
 
 get {
   url: {{baseUrl}}/api/v1/app-settings?key&type=permissions
   body: none
-  auth: inherit
+  auth: bearer
 }
 
 params:query {
@@ -17,4 +17,8 @@ params:query {
   ~page: 
   ~limit: 
   ~valueType: 
+}
+
+auth:bearer {
+  token: {{token}}
 }

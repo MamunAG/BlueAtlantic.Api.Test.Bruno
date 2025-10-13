@@ -1,0 +1,125 @@
+meta {
+  name: Set multiple settings by type [inventory]
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/api/v1/app-settings/by-type/:type
+  body: json
+  auth: inherit
+}
+
+params:path {
+  type: inventory
+}
+
+body:json {
+  {
+    "alert_frequency": "",
+    "bedding_replacement": true,
+    "daily_feeding_schedule": true,
+    "email_alerts": true,
+    "low_stock_thresholds": [
+      {
+        "id": 48,
+        "name": "Feed",// || null or catagory
+        "defaultThreshold": 50,
+        "unit": "bags",
+        "autoReorderEnabled": true,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:32.075Z",
+        "updatedAt": "2025-10-13T13:38:32.075Z",
+        "deletedAt": null,
+        "catagory": "Feed"//or name
+      },
+      {
+        "id": 47,
+        "name": "Medicine",
+        "defaultThreshold": 20,
+        "unit": "vials",
+        "autoReorderEnabled": true,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:31.387Z",
+        "updatedAt": "2025-10-13T13:38:31.387Z",
+        "deletedAt": null,
+        "catagory": "Medicine"
+      },
+      {
+        "id": 46,
+        "name": "Supplements",
+        "defaultThreshold": 30,
+        "unit": "bottles",
+        "autoReorderEnabled": false,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:30.907Z",
+        "updatedAt": "2025-10-13T13:38:30.907Z",
+        "deletedAt": null,
+        "catagory": "Supplements"
+      },
+      {
+        "id": 45,
+        "name": "Bedding",
+        "defaultThreshold": 10,
+        "unit": "bales",
+        "autoReorderEnabled": true,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:30.358Z",
+        "updatedAt": "2025-10-13T13:38:30.358Z",
+        "deletedAt": null,
+        "catagory": "Bedding"
+      },
+      {
+        "id": 44,
+        "name": "Care Products",
+        "defaultThreshold": 15,
+        "unit": "bottles",
+        "autoReorderEnabled": false,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:29.735Z",
+        "updatedAt": "2025-10-13T13:38:29.735Z",
+        "deletedAt": null,
+        "catagory": "Care Products"
+      },
+      {
+        "id": 43,
+        "name": "Equipment",
+        "defaultThreshold": 5,
+        "unit": "pieces",
+        "autoReorderEnabled": false,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:29.052Z",
+        "updatedAt": "2025-10-13T13:38:29.052Z",
+        "deletedAt": null,
+        "catagory": "Equipment"
+      },
+      {
+        "id": 42,
+        "name": "Grooming Supplies",
+        "defaultThreshold": 25,
+        "unit": "pieces",
+        "autoReorderEnabled": false,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:28.609Z",
+        "updatedAt": "2025-10-13T13:38:28.609Z",
+        "deletedAt": null,
+        "catagory": "Grooming Supplies"
+      },
+      {
+        "id": 41,
+        "name": "Safety Equipment",
+        "defaultThreshold": 10,
+        "unit": "pieces",
+        "autoReorderEnabled": true,
+        "status": "active",
+        "createdAt": "2025-10-13T13:38:27.786Z",
+        "updatedAt": "2025-10-13T13:38:27.786Z",
+        "deletedAt": null,
+        "catagory": "Safety Equipment"
+      }
+    ],
+    "medicine_administration": true,
+    "push_notifications": true,
+    "training_supplements": true
+  }
+}

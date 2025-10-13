@@ -1,0 +1,26 @@
+meta {
+  name: Set multiple settings by type [general]
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/v1/app-settings/by-type/:type
+  body: json
+  auth: inherit
+}
+
+params:path {
+  type: general
+}
+
+body:json {
+  {
+    "application_name": "blue",
+    "application_version": "2.1",
+    "debug_mode": true,
+    "default_country": null,
+    "default_timezone": "UTC",
+    "maintenance_mode": true
+  }
+}

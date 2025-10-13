@@ -1,0 +1,26 @@
+meta {
+  name: Set multiple settings by type [media]
+  type: http
+  seq: 12
+}
+
+post {
+  url: {{baseUrl}}/api/v1/app-settings/by-type/:type
+  body: json
+  auth: inherit
+}
+
+params:path {
+  type: media
+}
+
+body:json {
+  {
+    "allowed_file_types": [
+      "jpeg","png"
+    ],
+    "maximumFileSize": 0,
+    "maximum_file_size": null,
+    "storage_limit_per_user": null
+  }
+}
