@@ -1,11 +1,11 @@
 meta {
-  name: List app settings with pagination and filters
+  name: List app settings [finance]
   type: http
-  seq: 3
+  seq: 5
 }
 
 get {
-  url: {{baseUrl}}/api/v1/app-settings?key&type=finance&search
+  url: {{baseUrl}}/api/v1/app-settings?key&type=finance
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   key: 
   type: finance
-  search: 
+  ~search: 
   ~page: 
   ~limit: 
   ~valueType: 

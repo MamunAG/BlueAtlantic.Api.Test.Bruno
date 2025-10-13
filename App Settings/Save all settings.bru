@@ -1,7 +1,7 @@
 meta {
   name: Save all settings
   type: http
-  seq: 9
+  seq: 14
 }
 
 post {
@@ -137,7 +137,16 @@ body:json {
       "id": 52,
       "type": "media",
       "key": "allowed_file_types",
-      "value": "jpeg",
+      "value": [
+        {
+          "label": "JPG",
+          "value": "jpeg"
+        },
+        {
+          "label": "PNG",
+          "value": "png"
+        }
+      ],
       "valueType": "string",
       "description": "Allowed file types for upload",
       "createdAt": "2025-10-12T09:48:26.901Z",

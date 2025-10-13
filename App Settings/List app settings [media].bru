@@ -1,0 +1,20 @@
+meta {
+  name: List app settings [media]
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/v1/app-settings?key&type=media
+  body: none
+  auth: inherit
+}
+
+params:query {
+  key: 
+  type: media
+  ~search: 
+  ~page: 
+  ~limit: 
+  ~valueType: 
+}

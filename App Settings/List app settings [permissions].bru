@@ -1,0 +1,20 @@
+meta {
+  name: List app settings [permissions]
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/v1/app-settings?key&type=permissions
+  body: none
+  auth: inherit
+}
+
+params:query {
+  key: 
+  type: permissions
+  ~search: 
+  ~page: 
+  ~limit: 
+  ~valueType: 
+}
