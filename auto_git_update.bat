@@ -1,0 +1,71 @@
+@echo off
+:: ======================================================
+:: Auto Git Sync Script (Pull + Commit + Push)
+:: Works inside project root where .git exists
+:: Author: Abdullah Mamun
+:: ======================================================
+
+:: === CONFIGURATION ===
+set "BRANCH=main"
+set "LOG_FILE=%~dp0git_auto_sync_log.txt"
+set "COMMIT_MESSAGE=Auto-sync on %date% %time%"
+
+:: === START LOGGING ===
+echo. >> "%LOG_FILE%"
+echo ================================================== >> "%LOG_FILE%"
+echo [%date% %time%] Starting Git auto-sync... >> "%LOG_FILE%"
+
+:: === CHECK GIT AVAILABILITY ===
+git --version >nul 2>&1
+if errorlevel 1 (
+    echo [%date% %time%] ERROR: Git is not installed or not in PATH! >> "%LOG_FILE%"
+    exit /b 1
+)
+
+:: === MOVE TO SCRIPT DIRECTORY (PROJECT ROOT) ===
+cd /d "%~dp0"
+if errorlevel 1 (
+    echo [%date% %time%] ERROR: Failed to access project directory! >> "%LOG_FILE%"
+    exit /b 1
+)
+
+:: === ENSURE .GIT EXISTS ===
+if not exist ".git" (
+    echo [%date% %time%] ERROR: No .git directory found! >> "%LOG_FILE%"
+    exit /b 1
+)
+
+:: === STAGE ANY LOCAL CHANGES ===
+echo [%date% %time%] Checking for changes... >> "%LOG_FILE%"
+git add -A >> "%LOG_FILE%" 2>&1
+
+:: === COMMIT IF THERE ARE CHANGES ===
+git diff --cached --quiet
+if errorlevel 1 (
+    echo [%date% %time%] Local changes detected. Committing... >> "%LOG_FILE%"
+    git commit -m "%COMMIT_MESSAGE%" >> "%LOG_FILE%" 2>&1
+) else (
+    echo [%date% %time%] No local changes to commit. >> "%LOG_FILE%"
+)
+
+:: === PULL LATEST FROM REMOTE ===
+echo [%date% %time%] Pulling latest changes from remote branch '%BRANCH%'... >> "%LOG_FILE%"
+git pull origin %BRANCH% --rebase >> "%LOG_FILE%" 2>&1
+if errorlevel 1 (
+    echo [%date% %time%] ERROR: Git pull (rebase) failed! >> "%LOG_FILE%"
+    exit /b 1
+)
+
+:: === PUSH CHANGES BACK TO REMOTE ===
+echo [%date% %time%] Pushing local commits to remote... >> "%LOG_FILE%"
+git push origin %BRANCH% >> "%LOG_FILE%" 2>&1
+if errorlevel 1 (
+    echo [%date% %time%] ERROR: Git push failed! >> "%LOG_FILE%"
+    exit /b 1
+)
+
+:: === DONE ===
+echo [%date% %time%] ✅ Git sync completed successfully. >> "%LOG_FILE%"
+echo ================================================== >> "%LOG_FILE%"
+echo. >> "%LOG_FILE%"
+exit /b 0
