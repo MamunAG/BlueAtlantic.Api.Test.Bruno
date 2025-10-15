@@ -5,6 +5,8 @@
 :: Author: Abdullah Mamun
 :: ======================================================
 
+git rm --cached git_auto_sync_log.txt
+
 :: === CONFIGURATION ===
 set "BRANCH=main"
 set "LOG_FILE=%~dp0git_auto_sync_log.txt"
