@@ -1,0 +1,11 @@
+meta {
+  name: get-all-mobile-settings
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/v1/app-settings/get-all-mobile-settings
+  body: none
+  auth: inherit
+}

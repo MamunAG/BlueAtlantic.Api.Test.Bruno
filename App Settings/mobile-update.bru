@@ -1,0 +1,21 @@
+meta {
+  name: mobile/update
+  type: http
+  seq: 14
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/app-settings/mobile-settings/update
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+    {
+      "type": "notification_horse_care",
+      "key": "notification_feeding_reminder",
+      "value": false
+    }
+  ]
+}
