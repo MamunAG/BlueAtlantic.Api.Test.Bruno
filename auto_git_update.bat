@@ -2,9 +2,9 @@
 :: ======================================================
 :: Auto Git Sync Script (Stage + Commit + Pull + Push)
 :: Works inside project root where .git exists
-:: Author: Abdullah Mamun
+:: Author: Abdullah Al Mamun
 :: ======================================================
-
+:: Remove log file tracking
 git rm --cached git_auto_sync_log.txt
 
 :: === CONFIGURATION ===
