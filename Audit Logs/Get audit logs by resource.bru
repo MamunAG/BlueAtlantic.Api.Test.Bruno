@@ -7,7 +7,7 @@ meta {
 get {
   url: {{baseUrl}}/api/v1/audits/resource/:resource
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
@@ -16,8 +16,4 @@ params:query {
 
 params:path {
   resource: 
-}
-
-auth:bearer {
-  token: {{token}}
 }

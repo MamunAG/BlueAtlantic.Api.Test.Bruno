@@ -7,14 +7,10 @@ meta {
 get {
   url: {{baseUrl}}/api/v1/audits/stats
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
   ~startDate: 
   ~endDate: 
-}
-
-auth:bearer {
-  token: {{token}}
 }

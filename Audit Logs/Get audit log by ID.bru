@@ -7,13 +7,9 @@ meta {
 get {
   url: {{baseUrl}}/api/v1/audits/:id
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:path {
   id: 
-}
-
-auth:bearer {
-  token: {{token}}
 }

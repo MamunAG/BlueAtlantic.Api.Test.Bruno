@@ -7,13 +7,9 @@ meta {
 post {
   url: {{baseUrl}}/api/v1/audits/cleanup
   body: none
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
   ~daysToKeep: 
-}
-
-auth:bearer {
-  token: {{token}}
 }
