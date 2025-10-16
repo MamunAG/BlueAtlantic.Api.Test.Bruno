@@ -5,11 +5,11 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/v1/audits/cleanup
+  url: {{baseUrl}}/api/v1/audits/cleanup?daysToKeep=1000
   body: none
   auth: inherit
 }
 
 params:query {
-  ~daysToKeep: 
+  daysToKeep: 1000
 }
