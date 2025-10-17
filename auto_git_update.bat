@@ -5,7 +5,7 @@
 :: Author: Abdullah Al Mamun
 :: ======================================================
 :: Remove log file tracking
-git rm --cached git_auto_sync_log.txt
+git rm --cached git_auto_sync_log.txt >nul 2>&1
 
 :: === CONFIGURATION ===
 set "BRANCH=main"
