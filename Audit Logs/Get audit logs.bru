@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/audits?page&limit&search&resourceId&targetDays
+  url: {{baseUrl}}/api/v1/audits?page=1&limit=50&search&resourceId&targetDays=2
   body: none
   auth: inherit
 }
 
 params:query {
-  page: 
-  limit: 
+  page: 1
+  limit: 50
   search: 
   resourceId: 
-  targetDays: 
+  targetDays: 2
 }
