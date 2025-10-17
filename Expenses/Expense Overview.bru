@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/expenses/initial-data/expense-overview
+  url: {{baseUrl}}/api/v1/expenses/initial-data/expense-overview?horseId=0&timePeriod=monthly
   body: none
   auth: inherit
+}
+
+params:query {
+  horseId: 0
+  timePeriod: monthly
 }
