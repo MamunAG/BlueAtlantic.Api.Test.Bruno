@@ -1,0 +1,11 @@
+meta {
+  name: Expense Overview
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/expenses/initial-data/expense-overview
+  body: none
+  auth: inherit
+}
