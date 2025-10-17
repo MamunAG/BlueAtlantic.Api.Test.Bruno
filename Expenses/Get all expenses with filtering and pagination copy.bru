@@ -1,0 +1,15 @@
+meta {
+  name: Get all expenses with filtering and pagination copy
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/expenses/initial-data/expense-types
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
