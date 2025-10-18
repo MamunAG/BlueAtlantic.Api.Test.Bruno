@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/expenses?horseId=3
+  url: {{baseUrl}}/api/v1/expenses?page=1&limit=10&horseId=3
   body: none
   auth: inherit
 }
 
 params:query {
+  page: 1
+  limit: 10
   horseId: 3
-  ~page: 
-  ~limit: 
   ~type: 
   ~status: 
   ~submittedByUserId: 
