@@ -1,11 +1,11 @@
 meta {
   name: Get all expenses with filtering and pagination
   type: http
-  seq: 4
+  seq: 5
 }
 
 get {
-  url: {{baseUrl}}/api/v1/expenses?page=1&limit=10&horseId=3
+  url: {{baseUrl}}/api/v1/expenses?page=1&limit=10&horseId=3&type=feed
   body: none
   auth: inherit
 }
@@ -14,8 +14,8 @@ params:query {
   page: 1
   limit: 10
   horseId: 3
-  ~type: 
-  ~status: 
+  type: feed
+  ~status: approved
   ~submittedByUserId: 
   ~hasReceipt: 
   ~dateFrom: 
