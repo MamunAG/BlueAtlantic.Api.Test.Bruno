@@ -7,9 +7,5 @@ meta {
 get {
   url: {{baseUrl}}/api/v1/expenses/initial-data/category-breakdown
   body: none
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
