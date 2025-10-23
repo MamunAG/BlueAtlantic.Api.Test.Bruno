@@ -7,22 +7,18 @@ meta {
 patch {
   url: {{baseUrl}}/api/v1/physio-trainers/:id
   body: json
-  auth: bearer
+  auth: inherit
 }
 
 params:path {
-  id: 
-}
-
-auth:bearer {
-  token: {{token}}
+  id: 5
 }
 
 body:json {
   {
-    "userId": "",
-    "specialization": "",
-    "availability": "",
-    "status": ""
+    "userId": 10,
+    "specialization": "Sports Injury",
+    "availability": "Mon-Fri",
+    "status": "active"
   }
 }

@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/physio-trainers
+  url: {{baseUrl}}/api/v1/physio-trainers?page=1&limit=10&status=active
   body: none
   auth: bearer
 }
 
 params:query {
-  ~page: 
-  ~limit: 
-  ~status: 
+  page: 1
+  limit: 10
+  status: active
   ~userId: 
   ~specialization: 
   ~search: 

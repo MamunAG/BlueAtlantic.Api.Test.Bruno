@@ -1,7 +1,7 @@
 meta {
   name: Update time slot by id
   type: http
-  seq: 4
+  seq: 5
 }
 
 patch {
@@ -11,7 +11,7 @@ patch {
 }
 
 params:path {
-  id: 
+  id: 16
 }
 
 auth:bearer {
@@ -20,9 +20,9 @@ auth:bearer {
 
 body:json {
   {
-    "timeOfDay": "",
-    "durationMinutes": "",
-    "serviceType": "",
-    "status": ""
+    "timeOfDay": "09:00:00",
+    "durationMinutes": 60,
+    "serviceType": "workout",
+    "status": "available"
   }
 }
