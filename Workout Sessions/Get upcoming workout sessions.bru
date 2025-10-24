@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/workout-sessions/upcoming
+  url: {{baseUrl}}/api/v1/workout-sessions/upcoming?days=2
   body: none
   auth: bearer
 }
 
 params:query {
-  days: 
+  days: 2
 }
 
 auth:bearer {
