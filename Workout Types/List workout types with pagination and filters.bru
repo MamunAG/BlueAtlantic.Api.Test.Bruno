@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/workout-types?status=inactive
+  url: {{baseUrl}}/api/v1/workout-types
   body: none
   auth: bearer
 }
 
 params:query {
-  status: inactive
+  ~status: active
   ~page: 1
   ~limit: 10
   ~name: 
