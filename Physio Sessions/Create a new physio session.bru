@@ -16,14 +16,15 @@ auth:bearer {
 
 body:json {
   {
-    "athleteId": "", //logged-in user
-    "scheduledAt": "",
-    "location": "", //on_site | off_site
-    "offSiteLocation":"",
-    "horseId": "",
-    "treatmentArea": "",
-    "notes":"",
-    "physioUserId": "", //admin will update this
-    "status": ""
+    "athleteId": 7,//logged-in user
+    "scheduledAt": "2025-10-26T10:00:00",//default
+    "location": "on_site", //on_site | off_site
+    "offSiteLocation":"offSiteLocation",
+    "horseId": 15,//ui
+    "treatmentArea": "treatmentArea",
+    "notes":"notes",
+    "physioUserId": null, //admin will update this
+    "status": "pending"
   }
+  
 }

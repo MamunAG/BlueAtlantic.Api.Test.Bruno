@@ -11,7 +11,7 @@ patch {
 }
 
 params:path {
-  id: 
+  id: 2
 }
 
 auth:bearer {
@@ -20,11 +20,14 @@ auth:bearer {
 
 body:json {
   {
-    "athleteId": "",
-    "horseId": "",
-    "physioUserId": "",
-    "scheduledAt": "",
-    "location": "",
-    "status": ""
+    "athleteId": 7,//logged-in user
+    "scheduledAt": "2025-10-26T10:00:00",//default
+    "location": "on_site", //on_site | off_site
+    "offSiteLocation":"offSiteLocation up",
+    "horseId": 15,//ui
+    "treatmentArea": "treatmentArea up",
+    "notes":"notes up",
+    "physioUserId": null, //admin will update this
+    "status": "pending"
   }
 }
