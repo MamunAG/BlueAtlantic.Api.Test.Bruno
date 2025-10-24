@@ -15,21 +15,14 @@ auth:bearer {
 }
 
 body:json {
-  // {
-  //   "athleteId": "",
-  //   "horseId": "",
-  //   "trainerUserId": "",
-  //   "scheduledAt": "",
-  //   "workoutTypeId": "",
-  //   "status": ""
-  // }
   {
     "athleteId": 7,//logged-in user
-    "horseId": 15,//
-    "trainerUserId": 8,//
-    "scheduledAt": "2024-01-15T10:00:00",
-    "workoutTypeId": 1,//
-    "notes": "Cardio training session",//
-    "status": "pending"//
+    "sessionType": "Personal",
+    "horseId": 15,//ui
+    "trainerUserId": 8,//ui
+    "scheduledAt": "2024-01-15T10:00:00",//default
+    "workoutTypeId": 1,//ui
+    "notes": "Cardio training session",//ui
+    "status": "pending"//default
   }
 }

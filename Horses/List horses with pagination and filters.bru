@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horses
+  url: {{baseUrl}}/api/v1/horses?status=active
   body: none
   auth: bearer
 }
 
 params:query {
+  status: active
   ~page: 
   ~limit: 
-  ~status: 
   ~gender: 
   ~assignedRiderId: 
   ~breedId: 
