@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/audits?page=1&limit=50&search=admin@blueatlantic.com&resourceId=1&targetDays=90
+  url: {{baseUrl}}/api/v1/audits?page=1&limit=50&resourceId=1&targetDays=90&search=admin@blueatlantic.com
   body: none
   auth: inherit
 }
@@ -13,7 +13,7 @@ get {
 params:query {
   page: 1
   limit: 50
-  search: admin@blueatlantic.com
   resourceId: 1
   targetDays: 90
+  search: admin@blueatlantic.com
 }

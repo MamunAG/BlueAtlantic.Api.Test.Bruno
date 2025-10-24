@@ -5,16 +5,16 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/time-slots
+  url: {{baseUrl}}/api/v1/time-slots?status=active&serviceType=physio
   body: none
   auth: bearer
 }
 
 params:query {
+  status: active
+  serviceType: physio
   ~page: 
   ~limit: 
-  ~serviceType: 
-  ~status: 
   ~timeOfDay: 
   ~minDuration: 
   ~maxDuration: 
