@@ -11,7 +11,7 @@ patch {
 }
 
 params:path {
-  id: 
+  id: 2
 }
 
 auth:bearer {
@@ -19,11 +19,22 @@ auth:bearer {
 }
 
 body:json {
+  // {
+  //   "name": "item-1",
+  //   "inventoryCategoryId": 128,
+  //   "quantity": 500,
+  //   "unitId": 1,
+  //   "lowStockThreshold": 3,
+  //   "costPerUnit":10,
+  //   "status":"in_stock"
+  // }
   {
-    "name": "",
-    "defaultThreshold": "",
-    "unit": "",
-    "autoReorderEnabled": false,
-    "status": ""
+    "name": "item-1",
+    "inventoryCategoryId": 128,
+    "quantity": "500.00",
+    "unitId": 1,
+    "lowStockThreshold": 3,
+    "costPerUnit": 10,
+    "status": "in_stock"
   }
 }
