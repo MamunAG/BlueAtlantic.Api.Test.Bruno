@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/physio-sessions?status=pending
+  url: {{baseUrl}}/api/v1/physio-sessions
   body: none
   auth: bearer
 }
 
 params:query {
-  status: pending
-  ~page: 1
+  ~page: 2
   ~limit: 10
+  ~status: pending
   ~athleteId: 
   ~horseId: 
   ~physioUserId: 
