@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/workout-types
+  url: {{baseUrl}}/api/v1/workout-types?page=1&limit=10
   body: none
   auth: bearer
 }
 
 params:query {
+  page: 1
+  limit: 10
   ~status: active
-  ~page: 1
-  ~limit: 10
   ~name: 
   ~search: 
   ~minDuration: 
