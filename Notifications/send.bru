@@ -1,0 +1,24 @@
+meta {
+  name: send
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/notifications
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "token": "cEZ7YYA56-ab1bgyu693Jh:APA91bE43nshE2E5zG-UaWmdVwv-SgqjWosKE6iyDoriepedWjCtAQ6utiQNRvxjEa41xF8EfCcrgb7ptC1Pk7Z2T4xl5V0COaybATtGxtNGI-eqzEOD4o8",
+    "title": "Welcome to Blue Atlantic",
+    "message": "Let's make wonder together."
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
