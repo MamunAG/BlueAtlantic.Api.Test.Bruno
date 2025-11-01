@@ -1,0 +1,28 @@
+meta {
+  name: send to topic
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/v1/notifications/send-notifications-to-topic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "topic": "all_users",
+    "title": "Welcome to Blue Atlantic",
+    "message": "Let's make wonder together.(send to topic)",
+    "data": {
+      "type": "chat",
+      "chatId": "123"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

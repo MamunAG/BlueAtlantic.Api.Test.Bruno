@@ -1,0 +1,25 @@
+meta {
+  name: unsubscribe-to-topic
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/api/v1/notifications/unsubscribe-to-topic
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "tokens": [
+      "cEZ7YYA56-ab1bgyu693Jh:APA91bE43nshE2E5zG-UaWmdVwv-SgqjWosKE6iyDoriepedWjCtAQ6utiQNRvxjEa41xF8EfCcrgb7ptC1Pk7Z2T4xl5V0COaybATtGxtNGI-eqzEOD4o8"
+    ],
+    "topic": "all_users"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

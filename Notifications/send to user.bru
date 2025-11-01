@@ -1,0 +1,28 @@
+meta {
+  name: send to user
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/notifications/send-notifications-to-user
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userId": 9,
+    "title": "Welcome to Blue Atlantic",
+    "message": "Let's make wonder together.(send to user)",
+    "data": {
+      "type": "chat",
+      "chatId": "123"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

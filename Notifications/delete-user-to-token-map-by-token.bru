@@ -1,0 +1,27 @@
+meta {
+  name: delete-user-to-token-map-by-token
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/notifications/delete-user-to-token-map-by-token?token=cEZ7YYA56-ab1bgyu693Jh:APA91bE43nshE2E5zG-UaWmdVwv-SgqjWosKE6iyDoriepedWjCtAQ6utiQNRvxjEa41xF8EfCcrgb7ptC1Pk7Z2T4xl5V0COaybATtGxtNGI-eqzEOD4o8
+  body: none
+  auth: inherit
+}
+
+params:query {
+  token: cEZ7YYA56-ab1bgyu693Jh:APA91bE43nshE2E5zG-UaWmdVwv-SgqjWosKE6iyDoriepedWjCtAQ6utiQNRvxjEa41xF8EfCcrgb7ptC1Pk7Z2T4xl5V0COaybATtGxtNGI-eqzEOD4o8
+}
+
+body:json {
+  {
+    "userId": 9,
+    "token": "cEZ7YYA56-ab1bgyu693Jh:APA91bE43nshE2E5zG-UaWmdVwv-SgqjWosKE6iyDoriepedWjCtAQ6utiQNRvxjEa41xF8EfCcrgb7ptC1Pk7Z2T4xl5V0COaybATtGxtNGI-eqzEOD4o8"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
