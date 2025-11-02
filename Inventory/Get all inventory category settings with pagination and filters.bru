@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/inventory
+  url: {{baseUrl}}/api/v1/inventory?page=1&limit=100&inventoryCategoryId=128&status=low_stock
   body: none
   auth: inherit
 }
 
 params:query {
-  ~page: 
-  ~limit: 
-  ~status: 
-  ~autoReorderEnabled: 
-  ~search: 
+  page: 1
+  limit: 100
+  inventoryCategoryId: 128
+  status: low_stock
+  ~search: Premium Horse Feed
 }
