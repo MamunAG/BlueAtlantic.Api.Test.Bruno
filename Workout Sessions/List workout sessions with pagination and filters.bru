@@ -5,16 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/workout-sessions?page=2&limit=10
+  url: {{baseUrl}}/api/v1/workout-sessions
   body: none
   auth: bearer
 }
 
 params:query {
-  page: 2
-  limit: 10
+  ~page: 2
+  ~limit: 10
   ~athleteId: 
-  ~horseId: 
   ~trainerUserId: 
   ~workoutTypeId: 
   ~status: 

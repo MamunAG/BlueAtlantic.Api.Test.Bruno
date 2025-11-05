@@ -11,17 +11,25 @@ patch {
 }
 
 params:path {
-  id: 5
+  id: 25
 }
 
 body:json {
   {
-    "athleteId": 7,//logged-in user
-    "horseId": 16,//
-    "trainerUserId": 8,//
-    "scheduledAt": "2024-01-15T10:00:00",
-    "workoutTypeId": 1,//
-    "notes": "Cardio training session",//
-    "status": "pending"//
+    "athleteId": 7, //logged-in user
+    "sessionType": "Personal",
+    "trainerUserId": 8, //ui
+    "workoutTypeId": 1, //ui
+    "scheduledAt": "2025-11-10T10:00:00", //default
+    "notes": "Cardio training session", //ui
+    "status": "pending", //default
+    "details": [
+      {
+        "horseId": 15
+      },
+      {
+        "horseId": 21
+      }
+    ]
   }
 }
