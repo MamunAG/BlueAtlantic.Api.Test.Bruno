@@ -1,0 +1,38 @@
+meta {
+  name: Update physio session by id
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/physio-sessions/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": 9,
+    "eventType": "Feed",
+    "scheduledAt": "2025-03-14T10:00:00.000Z",
+    "location": "some location",
+    "note": "some note",
+    "isRecursive": false,
+    "details": [
+      {
+        "horseId": 15
+      },
+      {
+        "horseId": 5
+      }
+    ]
+  }
+}

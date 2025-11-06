@@ -1,0 +1,27 @@
+meta {
+  name: List physio sessions with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/calender-schedule
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 2
+  ~limit: 10
+  ~status: pending
+  ~athleteId: 
+  ~horseId: 
+  ~physioUserId: 
+  ~location: 
+  ~dateFrom: 
+  ~dateTo: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

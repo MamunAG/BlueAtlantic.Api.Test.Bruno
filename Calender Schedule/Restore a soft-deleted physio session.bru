@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted physio session
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/v1/physio-sessions/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}

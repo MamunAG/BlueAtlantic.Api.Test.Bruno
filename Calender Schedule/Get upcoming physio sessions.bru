@@ -1,0 +1,19 @@
+meta {
+  name: Get upcoming physio sessions
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/physio-sessions/upcoming?days=2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  days: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}
