@@ -5,13 +5,13 @@ meta {
 }
 
 patch {
-  url: {{baseUrl}}/api/v1/physio-sessions/:id
+  url: {{baseUrl}}/api/v1/calender-schedule/:id
   body: json
   auth: bearer
 }
 
 params:path {
-  id: 2
+  id: 1
 }
 
 auth:bearer {
@@ -25,7 +25,7 @@ body:json {
     "scheduledAt": "2025-03-14T10:00:00.000Z",
     "location": "some location",
     "note": "some note",
-    "isRecursive": false,
+    "isRecursive": true,
     "details": [
       {
         "horseId": 15
