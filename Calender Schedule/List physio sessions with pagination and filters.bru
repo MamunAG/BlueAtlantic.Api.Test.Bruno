@@ -5,21 +5,17 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/calender-schedule?page=2&limit=10
+  url: {{baseUrl}}/api/v1/calender-schedule
   body: none
   auth: bearer
 }
 
 params:query {
-  page: 2
-  limit: 10
-  ~status: pending
-  ~athleteId: 
-  ~horseId: 
-  ~physioUserId: 
-  ~location: 
-  ~dateFrom: 
-  ~dateTo: 
+  ~dateFrom: 2025-11-15
+  ~dateTo: 2025-11-15
+  ~page: 1
+  ~limit: 10
+  ~eventType: Feed
 }
 
 auth:bearer {
