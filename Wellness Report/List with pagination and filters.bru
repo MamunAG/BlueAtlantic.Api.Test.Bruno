@@ -1,0 +1,23 @@
+meta {
+  name: List with pagination and filters
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/wellness-report?page=1&limit=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+  limit: 10
+  ~reportTitle: Endurance
+  ~expertName: Someone
+  ~horseName: Thunder
+}
+
+auth:bearer {
+  token: {{token}}
+}

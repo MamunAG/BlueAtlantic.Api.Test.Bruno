@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/v1/wellness-report/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}

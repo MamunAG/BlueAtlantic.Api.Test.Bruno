@@ -1,0 +1,27 @@
+meta {
+  name: Create a new
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/wellness-report
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "reportTitle": "Endurance Training",
+    "expertName": "Someone name",
+    "horseName": "Thunder",
+    "session": "Wellness session-1",
+    "file_url": "https://....",
+    "thumbnail_url": "https://....",
+    "tag": "Wellness"
+  }
+}

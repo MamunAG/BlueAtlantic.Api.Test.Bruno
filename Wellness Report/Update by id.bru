@@ -1,0 +1,31 @@
+meta {
+  name: Update by id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/wellness-report/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "reportTitle": "Endurance Training up",
+    "expertName": "Someone name up",
+    "horseName": "Thunder up",
+    "session": "Wellness session-1 up",
+    "file_url": "https://.... up",
+    "thumbnail_url": "https://.... up",
+    "tag": "Wellness up"
+  }
+}
