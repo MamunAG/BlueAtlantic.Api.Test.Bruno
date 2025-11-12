@@ -1,0 +1,25 @@
+meta {
+  name: List calender-event with pagination and filters
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/calender-event?transportType=Flight
+  body: none
+  auth: bearer
+}
+
+params:query {
+  transportType: Flight
+  ~transportType: Truck
+  ~dateFrom: 2025-11-15
+  ~dateTo: 2025-11-15
+  ~page: 1
+  ~limit: 10
+  ~eventType: Feed
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,35 @@
+meta {
+  name: Create a new calender-event
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/v1/calender-event
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": 10,
+    "eventType": "Farrier",
+    "transportType":"Flight",
+    "scheduledAt": "2025-11-15T10:00:00.000Z",
+    "location": "some location",
+    "note": "some note",
+    "isRecursive": false,
+    "details": [
+      {
+        "horseId": 15
+      },
+      {
+        "horseId": 5
+      }
+    ]
+  }
+}

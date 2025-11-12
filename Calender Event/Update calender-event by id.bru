@@ -1,0 +1,39 @@
+meta {
+  name: Update calender-event by id
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/calender-event/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "userId": 10,
+    "eventType": "Farrier",
+    "transportType":"Truck",
+    "scheduledAt": "2025-11-15T10:00:00.000Z",
+    "location": "some location",
+    "note": "some note",
+    "isRecursive": false,
+    "details": [
+      {
+        "horseId": 15
+      },
+      {
+        "horseId": 5
+      }
+    ]
+  }
+}

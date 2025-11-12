@@ -1,0 +1,19 @@
+meta {
+  name: Restore a soft-deleted calender-event
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/v1/calender-event/:id/restore
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
