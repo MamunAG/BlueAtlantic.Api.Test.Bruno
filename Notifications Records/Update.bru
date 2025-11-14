@@ -1,0 +1,25 @@
+meta {
+  name: Update
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/v1/notification-records/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 2
+}
+
+body:json {
+  {
+    "recipientType": "All Users",
+    "notificationType": "Both",
+    "notificationTemplateId": "2",
+    "notificationTitle": "Some Title23 up",
+    "notificationMessage": "up 23Some message to send to the user."
+  }
+}

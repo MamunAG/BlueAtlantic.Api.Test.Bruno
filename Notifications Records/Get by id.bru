@@ -1,17 +1,17 @@
 meta {
-  name: Soft delete
+  name: Get by id
   type: http
-  seq: 6
+  seq: 3
 }
 
-delete {
-  url: {{baseUrl}}/api/v1/notification-template/:id
+get {
+  url: {{baseUrl}}/api/v1/notification-records/:id
   body: none
   auth: bearer
 }
 
 params:path {
-  id: 1
+  id: 2
 }
 
 auth:bearer {

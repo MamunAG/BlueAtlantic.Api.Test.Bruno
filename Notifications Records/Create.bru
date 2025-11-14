@@ -1,0 +1,25 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/notification-records
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "recipientType": "All Users",
+    "notificationType": "Both",
+    "notificationTemplateId": "2",
+    "notificationTitle": "Some Title23",
+    "notificationMessage": "23Some message to send to the user."
+  }
+}
