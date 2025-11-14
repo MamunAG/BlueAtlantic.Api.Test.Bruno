@@ -1,0 +1,19 @@
+meta {
+  name: Get by id
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/notification-template/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
