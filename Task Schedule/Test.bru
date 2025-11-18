@@ -1,0 +1,26 @@
+meta {
+  name: Test
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/task-schedule
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "userId": 100,
+    "horseId": 200,
+    "feedTime": "2025-11-18T08:12:00", // 
+    "type": "once", // once, daily, weekly, monthly
+    "notifyBeforeMinutes": 0
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
