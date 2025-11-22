@@ -1,0 +1,15 @@
+meta {
+  name: Summary
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/v1/wellness-report/summary
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
