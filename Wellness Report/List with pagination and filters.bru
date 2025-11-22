@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/wellness-report?page=1&limit=10
+  url: {{baseUrl}}/api/v1/wellness-report?page=1&limit=10&status=Approved
   body: none
   auth: bearer
 }
@@ -13,6 +13,7 @@ get {
 params:query {
   page: 1
   limit: 10
+  status: Approved
   ~reportTitle: Endurance
   ~expertName: Someone
   ~horseName: Thunder
