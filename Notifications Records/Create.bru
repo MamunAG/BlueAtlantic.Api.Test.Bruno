@@ -1,7 +1,7 @@
 meta {
   name: Create
   type: http
-  seq: 1
+  seq: 3
 }
 
 post {
@@ -15,9 +15,27 @@ auth:bearer {
 }
 
 body:json {
+  // {
+  //   "recipientType": "Athlete",
+  //   "notificationType": "Both",
+  //   "notificationTemplateId": "2",
+  //   "notificationTitle": "Some Title234",
+  //   "notificationMessage": "234 Some message to send to the user.",
+  //   "deliveryStatus":"Pending"
+  // }
+  
+  // {
+  //   "recipientType": "Athlete",
+  //   "notificationType": "Email",
+  //   "notificationTemplateId": "2",
+  //   "notificationTitle": "Some Title234",
+  //   "notificationMessage": "234 Some message to send to the user.",
+  //   "deliveryStatus":"Pending"
+  // }
+  
   {
-    "recipientType": "All Users",
-    "notificationType": "Both",
+    "recipientType": "Athlete",
+    "notificationType": "Push Notifications",
     "notificationTemplateId": "2",
     "notificationTitle": "Some Title234",
     "notificationMessage": "234 Some message to send to the user.",

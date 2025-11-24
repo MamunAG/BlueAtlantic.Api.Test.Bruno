@@ -1,0 +1,15 @@
+meta {
+  name: summary
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/notification-records/summary
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

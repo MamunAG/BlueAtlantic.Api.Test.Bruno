@@ -1,19 +1,19 @@
 meta {
   name: List with pagination and filters
   type: http
-  seq: 2
+  seq: 4
 }
 
 get {
-  url: {{baseUrl}}/api/v1/notification-records
+  url: {{baseUrl}}/api/v1/notification-records?recipientType=Athlete
   body: none
   auth: bearer
 }
 
 params:query {
+  recipientType: Athlete
   ~notificationType: Both
   ~notificationTemplateId: 2
-  ~recipientType: Trainers Only
   ~page: 1
   ~limit: 10
 }

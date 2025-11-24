@@ -1,0 +1,15 @@
+meta {
+  name: get-all-recipientType
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/notification-records/get-all-recipientType
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
