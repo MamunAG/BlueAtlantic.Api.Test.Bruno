@@ -1,0 +1,16 @@
+meta {
+  name: Expense Overview
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/v1/expenses/initial-data/expense-overview?horseId=0&timePeriod=monthly
+  body: none
+  auth: inherit
+}
+
+params:query {
+  horseId: 0
+  timePeriod: monthly
+}
