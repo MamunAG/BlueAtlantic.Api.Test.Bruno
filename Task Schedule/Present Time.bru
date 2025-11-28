@@ -1,12 +1,12 @@
 meta {
-  name: Test
+  name: Present Time
   type: http
-  seq: 1
+  seq: 2
 }
 
-post {
-  url: {{baseUrl}}/task-schedule
-  body: json
+get {
+  url: {{baseUrl}}/task-schedule/present-time
+  body: none
   auth: inherit
 }
 
