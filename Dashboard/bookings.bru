@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/dashboard/bookings?bookingType=Weekly
+  url: {{baseUrl}}/api/v1/dashboard/bookings?bookingType=Yearly
   body: none
   auth: bearer
 }
 
 params:query {
-  bookingType: Weekly
-  ~bookingType: Yearly
-  ~bookingType: Mothly
+  bookingType: Yearly
+  ~bookingType: Monthly
+  ~bookingType: Weekly
 }
 
 auth:bearer {
