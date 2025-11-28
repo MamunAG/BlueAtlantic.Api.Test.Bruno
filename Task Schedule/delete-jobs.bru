@@ -1,0 +1,35 @@
+meta {
+  name: delete-jobs
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/task-schedule/delete-jobs?jobName=CalEventFarrier1830047b-9377-4df2-95fd-bda7b90c7379
+  body: none
+  auth: inherit
+}
+
+params:query {
+  jobName: CalEventFarrier1830047b-9377-4df2-95fd-bda7b90c7379
+}
+
+body:json {
+  {
+    "userId": 100,
+    "body": "body",
+    "title": "title",
+    "payload": {
+      "horseId": 200
+    },
+    "jobName": "string-job-name",
+    "scheduledTime": "2025-11-18T08:16:00",
+    "scheduleType": "once",
+    "notifyBeforeMinutes": 0
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
