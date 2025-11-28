@@ -1,12 +1,12 @@
 meta {
-  name: Test
+  name: get-all-corn-jobs
   type: http
-  seq: 1
+  seq: 3
 }
 
-post {
-  url: {{baseUrl}}/task-schedule
-  body: json
+get {
+  url: {{baseUrl}}/task-schedule/get-all-corn-jobs
+  body: none
   auth: inherit
 }
 
@@ -18,9 +18,9 @@ body:json {
     "payload": {
       "horseId": 200
     },
-    "jobName": "",
-    "scheduledTime": "2025-11-28T15:53:32.393Z",
-    "scheduleType": "everyMinute",//daily,weekly,monthly,everyMinute,hourly
+    "jobName": "string-job-name",
+    "scheduledTime": "2025-11-18T08:16:00",
+    "scheduleType": "once",
     "notifyBeforeMinutes": 0
   }
 }
