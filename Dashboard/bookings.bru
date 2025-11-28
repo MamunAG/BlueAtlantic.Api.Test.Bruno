@@ -1,0 +1,19 @@
+meta {
+  name: bookings
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/dashboard/bookings?bookingType=Weekly
+  body: none
+  auth: bearer
+}
+
+params:query {
+  bookingType: Weekly
+}
+
+auth:bearer {
+  token: {{token}}
+}
