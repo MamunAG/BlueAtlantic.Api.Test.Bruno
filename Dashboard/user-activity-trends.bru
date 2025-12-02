@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/dashboard/user-activity-trends?type=Weekly
+  url: {{baseUrl}}/api/v1/dashboard/user-activity-trends?type=Yearly
   body: none
   auth: bearer
 }
 
 params:query {
-  type: Weekly
-  ~type: Yearly
+  type: Yearly
   ~type: Monthly
+  ~type: Weekly
 }
 
 auth:bearer {
