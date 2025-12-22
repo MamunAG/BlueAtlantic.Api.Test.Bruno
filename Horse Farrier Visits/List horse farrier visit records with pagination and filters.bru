@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horse-farrier-visits
+  url: {{baseUrl}}/api/v1/horse-farrier-visits?horseId=11&page=1&limit=10&farrierName=som&recordedByUserId=39
   body: none
   auth: bearer
 }
 
 params:query {
-  ~page: 
-  ~limit: 
-  ~horseId: 
-  ~farrierName: 
-  ~recordedByUserId: 
+  horseId: 11
+  page: 1
+  limit: 10
+  farrierName: som
+  recordedByUserId: 39
   ~dateFrom: 
   ~dateTo: 
   ~search: 
