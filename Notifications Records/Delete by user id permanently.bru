@@ -1,0 +1,19 @@
+meta {
+  name: Delete by user id permanently
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{baseUrl}}/api/v1/notification-records/delete-by-user-id/:userId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  userId: 8
+}
+
+auth:bearer {
+  token: {{token}}
+}
