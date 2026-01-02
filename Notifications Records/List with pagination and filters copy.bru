@@ -1,0 +1,23 @@
+meta {
+  name: List with pagination and filters copy
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/v1/notification-records/user
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~recipientType: Athlete
+  ~notificationType: Both
+  ~notificationTemplateId: 2
+  ~page: 1
+  ~limit: 10
+}
+
+auth:bearer {
+  token: {{token}}
+}

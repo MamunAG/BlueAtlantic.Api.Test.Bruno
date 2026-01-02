@@ -1,0 +1,19 @@
+meta {
+  name: Unseen notification count
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/api/v1/notification-records/unseen-notifications-count?userId=39
+  body: none
+  auth: bearer
+}
+
+params:query {
+  userId: 39
+}
+
+auth:bearer {
+  token: {{token}}
+}
