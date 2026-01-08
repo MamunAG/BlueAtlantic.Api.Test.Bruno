@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horse-vet-visit-attachments
+  url: {{baseUrl}}/api/v1/horse-vet-visit-attachments?page=1&limit=10&vetVisitId=1&fileId=1&search=eqeq
   body: none
   auth: bearer
 }
 
 params:query {
-  ~page: 
-  ~limit: 
-  ~vetVisitId: 
-  ~fileId: 
-  ~search: 
+  page: 1
+  limit: 10
+  vetVisitId: 1
+  fileId: 1
+  search: eqeq
 }
 
 auth:bearer {
