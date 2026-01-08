@@ -5,14 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/media-library
+  url: {{baseUrl}}/api/v1/media-library?horse_id=46&page=1&limit=10
   body: none
   auth: bearer
 }
 
 params:query {
-  ~page: 
-  ~limit: 
+  horse_id: 46
+  page: 1
+  limit: 10
   ~file_type: 
   ~search: 
   ~filters: 
