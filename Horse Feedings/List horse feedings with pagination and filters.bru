@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horse-feedings
+  url: {{baseUrl}}/api/v1/horse-feedings?horseId=11
   body: none
   auth: bearer
 }
 
 params:query {
+  horseId: 11
   ~page: 
   ~limit: 
-  ~horseId: 
   ~feedTypeId: 
   ~supplementId: 
   ~feedingTime: 
