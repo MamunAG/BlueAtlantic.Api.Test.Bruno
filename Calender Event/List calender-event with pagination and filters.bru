@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/calender-event?transportType=Flight
+  url: {{baseUrl}}/api/v1/calender-event?userId=7
   body: none
   auth: bearer
 }
 
 params:query {
-  transportType: Flight
+  userId: 7
+  ~transportType: Flight
   ~transportType: Truck
   ~dateFrom: 2025-11-15
   ~dateTo: 2025-11-15
