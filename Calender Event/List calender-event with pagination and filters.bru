@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/calender-event?userId=7
+  url: {{baseUrl}}/api/v1/calender-event
   body: none
   auth: bearer
 }
 
 params:query {
-  userId: 7
+  ~isOnlySoftDeletedData: true
+  ~userId: 7
   ~transportType: Flight
   ~transportType: Truck
   ~dateFrom: 2025-11-15

@@ -5,12 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horse-farrier-visits
+  url: {{baseUrl}}/api/v1/horse-farrier-visits?isOnlySoftDeletedData=true
   body: none
   auth: bearer
 }
 
 params:query {
+  isOnlySoftDeletedData: true
   ~horseId: 11
   ~page: 1
   ~limit: 10

@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/calender-schedule?userId=7
+  url: {{baseUrl}}/api/v1/calender-schedule?isOnlySoftDeletedData=true
   body: none
   auth: bearer
 }
 
 params:query {
-  userId: 7
+  isOnlySoftDeletedData: true
+  ~userId: 7
   ~dateFrom: 2025-11-15
   ~dateTo: 2025-11-15
   ~page: 1
