@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/calender-event
+  url: {{baseUrl}}/api/v1/calender-event?isOnlySoftDeletedData=true
   body: none
   auth: bearer
 }
 
 params:query {
-  ~isOnlySoftDeletedData: true
+  isOnlySoftDeletedData: true
   ~userId: 7
   ~transportType: Flight
   ~transportType: Truck
