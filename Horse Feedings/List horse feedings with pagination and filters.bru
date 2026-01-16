@@ -5,18 +5,18 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horse-feedings?horseId=11&feedTypeId=6&page=1&limit=10&supplementId=2&recordedByUserId=7
+  url: {{baseUrl}}/api/v1/horse-feedings?page=1&limit=10
   body: none
   auth: bearer
 }
 
 params:query {
-  horseId: 11
-  feedTypeId: 6
   page: 1
   limit: 10
-  supplementId: 2
-  recordedByUserId: 7
+  ~horseId: 11
+  ~feedTypeId: 6
+  ~supplementId: 2
+  ~recordedByUserId: 7
   ~minQuantity: 2
   ~maxQuantity: 1
   ~feedingTime: 
