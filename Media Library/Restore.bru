@@ -1,17 +1,17 @@
 meta {
-  name: Get a single media file by ID
+  name: Restore
   type: http
-  seq: 3
+  seq: 6
 }
 
-get {
-  url: {{baseUrl}}/api/v1/media-library/:id
+patch {
+  url: {{baseUrl}}/api/v1/media-library/:id/restore
   body: none
   auth: bearer
 }
 
 params:path {
-  id: 20
+  id: 16
 }
 
 auth:bearer {

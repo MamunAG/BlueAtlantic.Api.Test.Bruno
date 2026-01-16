@@ -1,17 +1,17 @@
 meta {
-  name: Delete a media file by ID
+  name: Permanently delete
   type: http
-  seq: 5
+  seq: 7
 }
 
 delete {
-  url: {{baseUrl}}/api/v1/media-library/:id
+  url: {{baseUrl}}/api/v1/media-library/:id/permanent
   body: none
   auth: bearer
 }
 
 params:path {
-  id: 
+  id: 16
 }
 
 auth:bearer {

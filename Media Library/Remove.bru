@@ -1,10 +1,10 @@
 meta {
-  name: Get a single media file by ID
+  name: Remove
   type: http
-  seq: 3
+  seq: 5
 }
 
-get {
+delete {
   url: {{baseUrl}}/api/v1/media-library/:id
   body: none
   auth: bearer

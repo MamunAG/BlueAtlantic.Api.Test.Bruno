@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/media-library
+  url: {{baseUrl}}/api/v1/media-library?isOnlySoftDeletedData=true
   body: none
   auth: bearer
 }
 
 params:query {
-  ~isOnlySoftDeletedData: true
+  isOnlySoftDeletedData: true
   ~horse_id: 46
   ~page: 1
   ~limit: 10
