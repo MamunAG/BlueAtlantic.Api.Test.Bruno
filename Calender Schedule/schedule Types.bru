@@ -1,0 +1,15 @@
+meta {
+  name: schedule Types
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/calender-schedule/schedule-types
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
