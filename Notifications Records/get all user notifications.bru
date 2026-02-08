@@ -1,16 +1,17 @@
 meta {
-  name: List with pagination and filters copy
+  name: get all user notifications
   type: http
   seq: 5
 }
 
 get {
-  url: {{baseUrl}}/api/v1/notification-records/user
+  url: {{baseUrl}}/api/v1/notification-records/user?userId=39
   body: none
   auth: bearer
 }
 
 params:query {
+  userId: 39
   ~recipientType: Athlete
   ~notificationType: Both
   ~notificationTemplateId: 2

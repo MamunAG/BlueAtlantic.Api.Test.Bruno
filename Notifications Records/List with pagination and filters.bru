@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/notification-records?recipientType=Athlete
+  url: {{baseUrl}}/api/v1/notification-records
   body: none
   auth: bearer
 }
 
 params:query {
-  recipientType: Athlete
+  ~userId: 11
+  ~recipientType: Athlete
   ~notificationType: Both
   ~notificationTemplateId: 2
   ~page: 1
