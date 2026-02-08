@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/v1/horse-health?page=1&limit=10&horseId=11&type=Treatment&status=Completed&recordedByUserId=7
+  url: {{baseUrl}}/api/v1/horse-health?page=1&limit=10&horseId=11
   body: none
   auth: bearer
 }
@@ -14,9 +14,9 @@ params:query {
   page: 1
   limit: 10
   horseId: 11
-  type: Treatment
-  status: Completed
-  recordedByUserId: 7
+  ~type: Treatment
+  ~status: Completed
+  ~recordedByUserId: 7
   ~dateFrom: 
   ~dateTo: 
   ~search: 
