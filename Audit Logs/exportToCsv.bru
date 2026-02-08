@@ -1,0 +1,17 @@
+meta {
+  name: exportToCsv
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v1/audits/exportToCsv?resourceId=1&targetDays=90&search=admin@blueatlantic.com
+  body: none
+  auth: inherit
+}
+
+params:query {
+  resourceId: 1
+  targetDays: 90
+  search: admin@blueatlantic.com
+}
